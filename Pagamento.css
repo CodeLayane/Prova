@@ -1,0 +1,81 @@
+/* Estiliza o corpo da página */
+body {
+    margin: 0; /* Remove margens padrão */
+    font-family: 'Noto Sans', sans-serif; /* Define a fonte do texto */
+    background: #050517; /* Define a cor de fundo da página */
+}
+
+/* Estiliza o contêiner principal */
+.container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: 50px auto; /* Centraliza o contêiner na página */
+    background-color: #241d33; /* Cor de fundo do contêiner */
+    padding: 20px; /* Adiciona espaço interno */
+    border-radius: 20px; /* Arredonda os cantos do contêiner */
+    box-shadow: 0px 10px 40px #00000056; /* Adiciona sombra ao contêiner */
+}
+
+/* Estiliza o título da seção */
+h2 {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #00ff88; /* Cor do texto do título */
+}
+
+/* Estiliza as labels */
+label {
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-bottom: 10px; /* Espaço abaixo das labels */
+    display: block; /* Faz com que as labels ocupem toda a largura */
+    color: #f0ffffde; /* Cor do texto das labels */
+}
+
+/* Estiliza os campos de entrada e seleção */
+input, select {
+    width: 100%; /* Largura total dos campos */
+    padding: 15px; /* Espaço interno nos campos */
+    margin-bottom: 15px; /* Espaço abaixo dos campos */
+    border: none; /* Remove bordas padrão */
+    border-radius: 10px; /* Arredonda os cantos dos campos */
+    background: #514869; /* Cor de fundo dos campos */
+    color: #f0ffffde; /* Cor do texto nos campos */
+    box-shadow: 0px 10px 40px #00000056; /* Adiciona sombra aos campos */
+    outline: none; /* Remove a borda ao focar */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    font-size: 12pt; /* Tamanho da fonte */
+}
+
+/* Estiliza o placeholder dos campos de entrada */
+input::placeholder {
+    color: #f0ffff94; /* Cor do texto do placeholder */
+}
+
+/* Estiliza o botão de finalizar */
+button {
+    width: 100%; /* Largura total do botão */
+    padding: 16px 0; /* Espaço interno do botão */
+    margin: 25px 0; /* Espaço vertical em torno do botão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 8px; /* Arredonda os cantos do botão */
+    outline: none; /* Remove a borda ao focar */
+    text-transform: uppercase; /* Transforma o texto para maiúsculas */
+    font-weight: 800; /* Deixa o texto em negrito */
+    letter-spacing: 3px; /* Espaçamento entre letras */
+    color: #2b134b; /* Cor do texto do botão */
+    background: #00ff88; /* Cor de fundo do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    box-shadow: 0px 10px 40px -12px #00ff8052; /* Adiciona sombra ao botão */
+}
+
+/* Estiliza o botão ao passar o mouse */
+button:hover {
+    background-color: #A020F0; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estiliza a seção de resumo da compra */
+.resumo-compra {
+    margin-top: 20px; /* Espaço acima da seção de resumo */
+    padding: 20px; /* Espaço interno da seção de resumo */
+    border-top: 1px solid #ccc; /* Borda superior na seção de resumo */
+    color: #f0ffffde; /* Cor do texto na seção de resumo */
+}

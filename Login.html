@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento, informa ao navegador que este é um documento HTML5 -->
+<html lang="en"> <!-- Início do documento HTML, com o atributo lang definindo o idioma como inglês -->
+<head>
+    <meta charset="utf-8"> <!-- Define a codificação de caracteres do documento como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Configura o navegador para usar o modo mais recente de renderização -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configura a visualização para dispositivos móveis, com largura da tela e escala inicial -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula o arquivo CSS externo que contém estilos para a página -->
+    <title>Login</title> <!-- Define o título da página que aparece na aba do navegador -->
+</head>
+<body>
+
+<div class="main-login"> <!-- Início do container principal do login -->
+    
+    <div class="left-login"> <!-- Início da seção esquerda do layout de login -->
+        <h1>Faça Login<br> E aproveite a estadia</h1> <!-- Cabeçalho principal da seção, informando o usuário para fazer login -->
+        <img src="hamburger-animate.svg" class="left-login-image" alt="Hamburguer"> <!-- Imagem do lado esquerdo, com descrição alternativa para acessibilidade -->
+
+    </div>
+
+    <div class="right-login"> <!-- Início da seção direita do layout de login -->
+        <div class="card-login"> <!-- Início do cartão de login -->
+            <h1>LOGIN</h1> <!-- Cabeçalho do cartão de login -->
+            <div class="text-field"> <!-- Início do campo de texto para o usuário -->
+                <label for="usuario">Usuário</label> <!-- Rótulo para o campo de entrada de usuário -->
+                <input type="text" name="usuario" placeholder="Usuário"> <!-- Campo de entrada de texto para o nome de usuário -->
+            </div>
+            <div class="text-field"> <!-- Início do campo de texto para a senha -->
+                <label for="senha">Senha</label> <!-- Rótulo para o campo de entrada de senha -->
+                <input type="password" name="senha" placeholder="Senha"> <!-- Campo de entrada de texto para a senha, com máscara -->
+            </div>
+            <button class="btn-login"><a href="Compras.html">Login</a></button> <!-- Botão de login que redireciona para a página de compras -->
+            <button class="btn-cadastro"><a href="Cadastro.html">Cadastrar novo usuário</a></button> <!-- Botão de cadastro que redireciona para a página de cadastro -->
+
+        </div> <!-- Fim do cartão de login -->
+
+    </div> <!-- Fim da seção direita -->
+
+</div> <!-- Fim do container principal -->
+
+</body> <!-- Fim do corpo do documento -->
+</html> <!-- Fim do documento HTML -->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres do documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+    <title>Pagamento</title> <!-- Título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="Pagamento.css"> <!-- Link para o arquivo CSS que estiliza a página -->
+</head>
+<body>
+
+    <div class="container"> <!-- Contêiner principal da página -->
+        <h2>Pagamento</h2> <!-- Título da seção de pagamento -->
+
+        <label for="bandeira-cartao">Bandeira do Cartão</label>
+        <select id="bandeira-cartao" required> <!-- Seletor de bandeira do cartão -->
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="American Express">American Express</option>
+        </select>
+
+        <label for="numero-cartao">Número do Cartão</label>
+        <input type="text" id="numero-cartao" maxlength="16" placeholder="Digite o número do cartão" required> <!-- Campo para número do cartão -->
+
+        <label for="data-expiracao">Data de Expiração</label>
+        <input type="text" id="data-expiracao" maxlength="5" placeholder="MM/AA" required> <!-- Campo para data de expiração -->
+
+        <label for="codigo-seguranca">Código de Segurança (CVV)</label>
+        <input type="text" id="codigo-seguranca" maxlength="3" placeholder="CVV" required> <!-- Campo para código de segurança (CVV) -->
+
+        <!-- Botão para finalizar a compra -->
+        <button id="btn-finalizar">Finalizar</button>
+    </div>
+
+    <script>
+        // Adiciona um evento de clique ao botão "Finalizar"
+        document.getElementById('btn-finalizar').addEventListener('click', function() {
+            var bandeira = document.getElementById('bandeira-cartao').value; // Obtém o valor da bandeira selecionada
+            var url = 'resumo.html?bandeira=' + encodeURIComponent(bandeira); // Cria a URL do resumo, adicionando a bandeira como parâmetro
+            window.location.href = url; // Redireciona para a nova página
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento, informa ao navegador que este é um documento HTML5 -->
+<html lang="pt-br"> <!-- Início do documento HTML, com o atributo lang definindo o idioma como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres do documento como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Configura o navegador para usar o modo mais recente de renderização -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis, com largura da tela e escala inicial -->
+    <title>Formulário</title> <!-- Define o título da página que aparece na aba do navegador -->
+    
+    <style>
+        /* Importa fontes do Google Fonts para estilização */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+        /* Define estilos globais para todos os elementos */
+        * {
+            padding: 0; /* Remove o preenchimento padrão */
+            margin: 0; /* Remove a margem padrão */
+            box-sizing: border-box; /* Inclui o preenchimento e borda na largura total dos elementos */
+            font-family: 'Inter', sans-serif; /* Define a fonte padrão como Inter */
+        }
+
+        /* Estilos do corpo da página */
+        body {
+            width: 100vw; /* Define a largura da página como 100% da largura da janela de visualização */
+            height: 100vh; /* Define a altura da página como 100% da altura da janela de visualização */
+            background: #050517; /* Define a cor de fundo da página */
+            display: flex; /* Define o layout como flexível */
+            justify-content: center; /* Centraliza horizontalmente o conteúdo */
+            align-items: center; /* Centraliza verticalmente o conteúdo */
+        }
+
+        /* Estilos do container do formulário */
+        .container {
+            width: 80vw; /* Define a largura do container como 80% da largura da janela de visualização */
+            height: auto; /* A altura é ajustada automaticamente */
+            display: flex; /* Define o layout do container como flexível */
+            justify-content: space-between; /* Espaça os itens dentro do container */
+            align-items: center; /* Alinha verticalmente os itens no centro */
+            padding: 30px 35px; /* Define o preenchimento interno do container */
+            background: #241d33; /* Define a cor de fundo do container */
+            border-radius: 20px; /* Arredonda os cantos do container */
+            box-shadow: 0px 10px 40px #00000056; /* Adiciona uma sombra ao redor do container */
+        }
+
+        /* Estilos do cabeçalho do formulário */
+        .form-header h1 {
+            color: #00ff88; /* Define a cor do texto do cabeçalho */
+            font-weight: 800; /* Define a espessura da fonte */
+            margin-bottom: 30px; /* Adiciona margem abaixo do cabeçalho */
+        }
+
+        /* Estilos da imagem do formulário */
+        .form-image {
+            width: 50%; /* Define a largura da seção da imagem como 50% do container */
+            display: flex; /* Define o layout da seção da imagem como flexível */
+            justify-content: center; /* Centraliza horizontalmente a imagem */
+            align-items: center; /* Centraliza verticalmente a imagem */
+            padding: 1rem; /* Adiciona preenchimento à seção da imagem */
+        }
+
+        /* Estilos da imagem dentro da seção do formulário */
+        .form-image img {
+            width: 100%; /* Define a largura da imagem como 100% do seu container */
+            max-width: 31rem; /* Define a largura máxima da imagem */
+        }
+
+        /* Estilos do grupo de entradas */
+        .input-group {
+            width: 100%; /* Define a largura do grupo de entradas como 100% do container */
+            display: flex; /* Define o layout do grupo de entradas como flexível */
+            flex-wrap: wrap; /* Permite que os itens dentro do grupo quebrem para a linha seguinte se não houver espaço */
+            justify-content: space-between; /* Espaça os itens dentro do grupo */
+        }
+
+        /* Estilos das caixas de entrada */
+        .input-box {
+            width: 48%; /* Define a largura de cada caixa de entrada como 48% do grupo */
+            display: flex; /* Define o layout da caixa de entrada como flexível */
+            flex-direction: column; /* Organiza os elementos da caixa em coluna */
+            margin-bottom: 15px; /* Adiciona margem abaixo de cada caixa */
+        }
+
+        /* Estilos do rótulo das entradas */
+        .input-box label {
+            color: #f0ffffde; /* Define a cor do texto do rótulo */
+            margin-bottom: 10px; /* Adiciona margem abaixo do rótulo */
+        }
+
+        /* Estilos dos campos de entrada */
+        .input-box input {
+            width: 100%; /* Define a largura do campo de entrada como 100% da caixa */
+            border: none; /* Remove a borda padrão do campo de entrada */
+            border-radius: 10px; /* Arredonda os cantos do campo de entrada */
+            padding: 15px; /* Define o preenchimento interno do campo de entrada */
+            background: #514869; /* Define a cor de fundo do campo de entrada */
+            color: #f0ffffde; /* Define a cor do texto dentro do campo de entrada */
+            font-size: 12pt; /* Define o tamanho da fonte do texto dentro do campo */
+            box-shadow: 0px 10px 40px #00000056; /* Adiciona uma sombra ao redor do campo de entrada */
+            outline: none; /* Remove o contorno padrão do campo de entrada ao focar */
+            box-sizing: border-box; /* Inclui o preenchimento e borda na largura total do campo */
+        }
+
+        /* Estilos do texto de placeholder no campo de entrada */
+        .input-box input::placeholder {
+            color: #f0ffff94; /* Define a cor do texto de placeholder */
+        }
+
+        /* Estilos do grupo de botão de continuar */
+        .continue-button {
+            width: 100%; /* Define a largura do grupo de botão como 100% do container */
+            display: flex; /* Define o layout do grupo de botão como flexível */
+            justify-content: center; /* Centraliza horizontalmente o botão */
+        }
+
+        /* Estilos do botão de continuar */
+        .continue-button button {
+            width: 100%; /* Define a largura do botão como 100% do grupo */
+            max-width: 200px; /* Define a largura máxima do botão */
+            padding: 16px 0px; /* Define o preenchimento interno do botão */
+            margin-top: 25px; /* Adiciona margem acima do botão */
+            border: none; /* Remove a borda padrão do botão */
+            border-radius: 8px; /* Arredonda os cantos do botão */
+            text-transform: uppercase; /* Transforma o texto do botão em letras maiúsculas */
+            font-weight: 800; /* Define a espessura da fonte do botão */
+            letter-spacing: 3px; /* Adiciona espaçamento entre as letras do botão */
+            color: #2b134b; /* Define a cor do texto do botão */
+            background: #00ff88; /* Define a cor de fundo do botão */
+            cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+            box-shadow: 0px 10px 40px -12px #00ff8052; /* Adiciona uma sombra ao redor do botão */
+        }
+
+        /* Estilos do botão ao passar o mouse */
+        .continue-button button:hover {
+            background-color: #00e67e; /* Altera a cor de fundo do botão ao passar o mouse */
+        }
+
+        /* Estilos responsivos para telas menores que 768px */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Altera a direção do layout do container para coluna em telas menores */
+                width: 90%; /* Define a largura do container como 90% da largura da janela */
+            }
+
+            .input-box {
+                width: 100%; /* Define a largura das caixas de entrada como 100% do grupo em telas menores */
+            }
+
+            .continue-button {
+                width: 100%; /* Define a largura do grupo de botão como 100% do container em telas menores */
+                display: flex; /* Mantém o layout do grupo de botão como flexível */
+                justify-content: center; /* Centraliza horizontalmente o botão em telas menores */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"> <!-- Início do container principal que contém o formulário e a imagem -->
+        <div class="form"> <!-- Início da seção do formulário -->
+            <form action="#"> <!-- Início do formulário, a ação pode ser definida para onde os dados serão enviados -->
+                <div class="form-header"> <!-- Início do cabeçalho do formulário -->
+                    <h1>Cadastro</h1> <!-- Título do formulário -->
+                </div>
+
+                <div class="input-group"> <!-- Início do grupo de entradas -->
+                    <div class="input-box"> <!-- Início da caixa de entrada para o nome -->
+                        <label for="nome">Nome</label> <!-- Rótulo para o campo de entrada do nome -->
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required> <!-- Campo de entrada de texto para o nome, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para o e-mail -->
+                        <label for="email">E-mail</label> <!-- Rótulo para o campo de entrada de e-mail -->
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required> <!-- Campo de entrada de e-mail, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para a data de nascimento -->
+                        <label for="nascimento">Data de Nascimento</label> <!-- Rótulo para o campo de entrada de data de nascimento -->
+                        <input id="nascimento" type="date" name="nascimento" required> <!-- Campo de entrada de data, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para o logradouro -->
+                        <label for="logradouro">Logradouro</label> <!-- Rótulo para o campo de entrada do logradouro -->
+                        <input id="logradouro" type="text" name="logradouro" placeholder="Digite seu logradouro" required> <!-- Campo de entrada de texto para o logradouro, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para o número -->
+                        <label for="numero">Número</label> <!-- Rótulo para o campo de entrada do número -->
+                        <input id="numero" type="text" name="numero" placeholder="Digite o número" required> <!-- Campo de entrada de texto para o número, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para a quadra -->
+                        <label for="quadra">Quadra</label> <!-- Rótulo para o campo de entrada da quadra -->
+                        <input id="quadra" type="text" name="quadra" placeholder="Digite a quadra" required> <!-- Campo de entrada de texto para a quadra, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para o lote -->
+                        <label for="lote">Lote</label> <!-- Rótulo para o campo de entrada do lote -->
+                        <input id="lote" type="text" name="lote" placeholder="Digite o lote" required> <!-- Campo de entrada de texto para o lote, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para o bairro -->
+                        <label for="bairro">Bairro</label> <!-- Rótulo para o campo de entrada do bairro -->
+                        <input id="bairro" type="text" name="bairro" placeholder="Digite seu bairro" required> <!-- Campo de entrada de texto para o bairro, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para o CEP -->
+                        <label for="cep">CEP</label> <!-- Rótulo para o campo de entrada do CEP -->
+                        <input id="cep" type="text" name="cep" placeholder="Digite o CEP" required> <!-- Campo de entrada de texto para o CEP, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para a cidade -->
+                        <label for="cidade">Cidade</label> <!-- Rótulo para o campo de entrada da cidade -->
+                        <input id="cidade" type="text" name="cidade" placeholder="Digite sua cidade" required> <!-- Campo de entrada de texto para a cidade, obrigatório -->
+                    </div>
+
+                    <div class="input-box"> <!-- Início da caixa de entrada para o estado -->
+                        <label for="estado">Estado</label> <!-- Rótulo para o campo de entrada do estado -->
+                        <input id="estado" type="text" name="estado" placeholder="Digite seu estado" required> <!-- Campo de entrada de texto para o estado, obrigatório -->
+                    </div>
+                </div> <!-- Fim do grupo de entradas -->
+
+                <div class="continue-button"> <!-- Início do grupo de botão de continuar -->
+                    <button type="submit"><a href = "Login.html">Salvar</a></button> <!-- Botão de envio do formulário, que ativa a ação definida no formulário -->
+                </div>
+            </form> <!-- Fim do formulário -->
+        </div> <!-- Fim da seção do formulário -->
+        
+        <div class="form-image"> <!-- Início da seção da imagem do formulário -->
+            <img src="contact-us-animate.svg" alt="Contato"> <!-- Imagem ilustrativa ao lado do formulário, com descrição alternativa para acessibilidade -->
+        </div> <!-- Fim da seção da imagem do formulário -->
+    </div> <!-- Fim do container principal -->
+</body> <!-- Fim do corpo do documento -->
+</html> <!-- Fim do documento HTML -->

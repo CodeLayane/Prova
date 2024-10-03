@@ -1,0 +1,50 @@
+/* Estiliza o corpo da página */
+body {
+    margin: 0; /* Remove margens padrão */
+    font-family: 'Noto Sans', sans-serif; /* Define a fonte do texto */
+    background: #050517; /* Define a cor de fundo da página */
+}
+
+/* Estiliza o contêiner principal */
+.container {
+    max-width: 600px; /* Largura máxima do contêiner */
+    margin: 50px auto; /* Centraliza o contêiner na página */
+    background-color: #241d33; /* Cor de fundo do contêiner */
+    padding: 20px; /* Adiciona espaço interno */
+    border-radius: 20px; /* Arredonda os cantos do contêiner */
+    box-shadow: 0px 10px 40px #00000056; /* Adiciona sombra ao contêiner */
+}
+
+/* Estiliza o título da seção */
+h2 {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #00ff88; /* Cor do texto do título */
+}
+
+/* Estiliza os parágrafos do resumo */
+p {
+    font-size: 16px; /* Tamanho da fonte */
+    color: #f0ffffde; /* Cor do texto */
+    margin: 10px 0; /* Espaço vertical entre os parágrafos */
+}
+
+/* Estiliza o botão de voltar */
+button {
+    width: 100%; /* Largura total do botão */
+    padding: 16px 0; /* Espaço interno do botão */
+    margin-top: 20px; /* Espaço acima do botão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 8px; /* Arredonda os cantos do botão */
+    outline: none; /* Remove a borda ao focar */
+    background: #00ff88; /* Cor de fundo do botão */
+    color: black; /* Cor do texto do botão */
+    font-weight: bold; /* Deixa o texto em negrito */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Estiliza o botão ao passar o mouse */
+button:hover {
+    background-color: #A020F0; /* Cor de fundo do botão ao passar o mouse */
+}
